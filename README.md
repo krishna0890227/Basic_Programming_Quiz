@@ -1,7 +1,7 @@
 # Online Basic Programming Quiz
 
 # Project Overview
-This website is introducing online quiz platform for basic programmer. It allows early users to test their knowledge in various subjects with a focus on programming languages (Python/JavaScript/Sql).
+This website introduces an online quiz platform for basic programmers. It allows early users to test their knowledge in various subjects, with a focus on programming languages (Python/JavaScript/SQL).
 
 # Features
 
@@ -30,9 +30,9 @@ This website is introducing online quiz platform for basic programmer. It allows
   
  # Features 
  **1. Front-end**
-    - HTML, CSS, and JS
-    - Responsive design for mobile/tablet/desktop
-    - Animations for question transitions feedback
+ - HTML, CSS, and J
+ - Responsive design for mobile/tablet/desktop
+ - Animations for question transitions feedback
    
 **2. Back-end**
    - Django
