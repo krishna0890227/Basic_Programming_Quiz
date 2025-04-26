@@ -1,1 +1,73 @@
-/*  this is style file */
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Macondo&display=swap');
+
+/* Start body section */
+body {
+    padding: 0;
+    margin: 0;
+    background-color:whitesmoke;
+    font-family:"Courier Prime", monospace;
+    font-size: 1.1rem;
+
+}
+
+.w100 {
+    width: 100%;
+}
+#logo {
+    margin:5px;
+    left: 10px;
+}
+
+/* Start Navigation Section */
+nav {
+    background-color:darkgreen;
+    font-family:'Courier Prime', Courier, monospace
+}
+
+
+h1, h2, h3, h5 { 
+    color:darkgreen;
+}
+
+/* Different IDs */
+#aboutus {
+    color: yellogreen;
+    background-color: lightgray;
+}
+
+.color-uniform {
+    color:darkgreen;
+
+}
+.table-text {
+    font-size: 1rem;
+}
+
+#contactus{
+    color:green;
+    background-color:lightgray;
+}
+
+#sign-up {
+    background-color:whitesmoke;
+}
+
+#signup-btn {
+    background-color: darkgreen;
+}
+.sharp-corners * {
+    border-radius:0;
+}
+#social-networks {
+    text-align: center;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+}
+
+#social-networks i {
+    font-size: 160%;
+    padding: 10%;
+    color: #3a3a3a;
+}
