@@ -6,35 +6,106 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" 
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
         <link href="https://fonts.googleapis.com/css?family=Raleway%7CRighteous" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
         <title>Basic Programming Quiz</title>
     </head>
+
+    <body>
    <main>
-    <div class="container">
-        <h1>Select a Quiz</h1>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">Quiz Test</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="python.html">Python</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="javascript.html">JavaScript</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="css.html">CSS</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+         
+    </header>
+   
+    <div class="container justify-content-center">
+        <h2>Select the programming language</h2>
         <div class="row">
-            <div class="col-3">
-            <div class="quiz-options">
-            <a href="python.html" class="quiz-card">
-                <h2>Python Quiz</h2>
-                <p>Test your knowledge of Python programming</p>
-            </a>
+            <div class="col-6">
+                <img src="assets/images/hero.jpg" alt="programming image">
+            </div>
+           <div class="col-6 justify-content-center">
+            <h3>Motivational Qutoe for programming</h3>
+            <p>When it comes to learning a new skill like coding, finding the motivation to keep going (especially when 
+                you feel stuck or frustrated) is often the biggest hurdle. 
+                Scroll through posts on our community platform, and you’ll see that motivation 
+                is a hot topic. Learners at every stage of their journey — from seasoned devs who are
+                 upskilling to absolute newbies — want to know how to find and maintain motivation. </p>
+            </div>
+             
         </div>
-        <div class="col-3">
-            <a href="javascript.html" class="quiz-card">
-                <h2>JavaScript Quiz</h2>
-                <p>Test your knowledge of JavaScript programming</p>
-            </a>
-        </div>
-        <div class="col-3">
-            <a href="css.html" class="quiz-card">
-                <h2>CSS Quiz</h2>
-                <p>Test your knowledge of CSS styling</p>
-            </a>
-        </div>
+        <div class="row justify-content-center">
+            <div class="col-4">
+            <div class="card" style="width: 18rem;">
+                <img src="assets/images/python.jpg" class="card-img-top" alt="python programming">
+                <div class="card-body">
+                  <h5 class="card-title display-6">Python Programming</h5>
+                  <h6 class="card-subtitle mb-4 text-body-secondary"> A exercise to test Python Knowledge</h6> <br>
+                  <p class="card-text">It contains 20 random questions.</p>
+                  <a href="python.html" class="quiz-card">
+                    <h3>Python Quiz</h3>
+                    <button type="button" class="btn btn-outline-success btn-lg">Test Your Knowledge</button>
+                    </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="card" style="width: 18rem;">
+                <img src="assets/images/javascript.jpg" class="card-img-top" alt="javascript programming">
+                <div class="card-body">
+                  <h5 class="card-title display-6">JavaScript Programming</h5>
+                  <h6 class="card-subtitle mb-4 text-body-secondary"> A exercise to test Python Knowledge</h6> <br>
+                  <p class="card-text">It contains 20 random questions.</p>
+                  <a href="javascript.html" class="quiz-card">
+                    <h3>JavaScript Quiz</h3>
+                    <button type="button" class="btn btn-outline-success btn-lg">Test Your Knowledge</button>
+                    </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="card" style="width: 18rem;">
+                <img src="assets/images/css.jpg" class="card-img-top" alt="CSS">
+                <div class="card-body">
+                  <h5 class="card-title display-6">CSS Programming</h5>
+                  <h6 class="card-subtitle mb-4 text-body-secondary"> A exercise to test Python Knowledge</h6> <br>
+                  <p class="card-text">It contains 20 random questions.</p>
+                  <a href="css.html" class="quiz-card">
+                    <h3>CSS Quiz</h3>
+                    <button type="button" class="btn btn-outline-success btn-lg">Test Your Knowledge</button>
+    
+                    </a>
+                </div>
+              </div>
+              </div>
         </div>
     </div>
 
-</main>   
+  </main>   
  </body>
+ 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
     <script src="assets/js/script.js"></script>
 </html>
