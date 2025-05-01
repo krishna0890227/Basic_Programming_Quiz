@@ -18,6 +18,16 @@ body {
     left: 10px;
 }
 
+.container, .rows {
+    border:2px solid black;
+
+}
+
+.col-4,.col-6, .col-12{
+border:2px solid white;
+background-color:lightgray
+}
+
 /* Start Navigation Section */
 nav {
     background-color:darkgreen;
