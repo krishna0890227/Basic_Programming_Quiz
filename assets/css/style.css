@@ -1,7 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Macondo&display=swap');
 
+
+/* root section of css*/
+:root {
+    --primary-font: "Inter", sans-serif;
+    --secondary-font: "Macondo", cursive;
+    --primary-color: #416a8e; /*blue */
+}
+/* Global Styles */
+
 /* Start body section */
 body {
+    font-family: var(--primary-font);
     padding: 0;
     margin: 0;
     background-color:whitesmoke;
@@ -37,7 +47,15 @@ nav {
 
 h1, h2, h3, h5 { 
     color:darkgreen;
+    font-family: var(--secondary-font);
+    color: var(--primary-color);
+
 }
+/* Navbar */
+#navbar {
+    background-color: var(--primary-color);
+}
+
 
 /* Different IDs */
 #aboutus {
