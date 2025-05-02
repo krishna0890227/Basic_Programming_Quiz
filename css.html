@@ -58,15 +58,38 @@
             <a href="index.html" class="home-btn">Back to Home</a>
         </div>
     </div>
+    <section class="container">
+      <div class="col-12 justify-content-center">
+        <h3>Please Share Your Experience:</h3>
+          <form class="was-validated">
+            <div class="mb-3 position-relative">
+              <label for="validationTooltip01" class="form-label">Full Name: </label>
+              <input type="text" class="form-control" id="validationTooltip01" value="Mark" required>
+            </div>
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label">Email Address:</label>
+              <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" required>
+            </div>
+            <div class="mb-3">
+              <label for="validationTextarea" class="form-label">Textarea</label>
+              <textarea class="form-control" id="validationTextarea" placeholder="Required example textarea" required></textarea>
+            </div>
+            <div class="mb-3">
+              <button class="btn btn-primary" type="submit" disabled>Send</button>
+            </div>
+          </form>
+      </div>
+
+    </section>
 </main>
     <!-- Footer / Contact section-->
  <!-- mt-auto added to push to the bottom of the page -->
  <footer class="mt-auto">
   <div class="container">
       <div class="row justify-content-center">
-          <div class="col-6">
+          <div id="social-network" class="col-12">
             <h3>About Us</h3>
-            <h6>ABC Company</h6>
+            <h6>ABC Company Limited</h6>
             <h6>SandyFord, Dublin 12, Ireland</h6>
             <h6>Contact us on abc@company.ie or </h6>
             <h6>Call us directly +353-061-458932</h6>
@@ -92,17 +115,6 @@
                         <i class="fa-brands fa-instagram"></i></a>
                 </li>
             </ul>
-          </div>
-          <div class="col-6">
-              <p>Please Send Python Exam Experience:</p>
-              <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-              </div>
-              <div class="mb-3">
-                <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-              </div>
           </div>
       </div>
   </div>

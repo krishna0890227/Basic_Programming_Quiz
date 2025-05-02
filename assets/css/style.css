@@ -5,13 +5,18 @@
 :root {
     --primary-font: "Inter", sans-serif;
     --secondary-font: "Macondo", cursive;
-    --primary-color: #416a8e; /*blue */
+    --primary-color: #3a2621;
+    --secondary-color: #aa9581;
+    --highlight-color: #41618e;
+    --lighthighlight-color: #7a9fc2;
+
 }
 /* Global Styles */
 
 /* Start body section */
 body {
     font-family: var(--primary-font);
+    background-color: whitesmoke;
     padding: 0;
     margin: 0;
     background-color:whitesmoke;
@@ -40,16 +45,21 @@ background-color:lightgray
 
 /* Start Navigation Section */
 nav {
-    background-color:darkgreen;
+    background-color: var(--primary-color);
     font-family:'Courier Prime', Courier, monospace
 }
 
 
 h1, h2, h3, h5 { 
-    color:darkgreen;
     font-family: var(--secondary-font);
     color: var(--primary-color);
+}
 
+h1, h2, h3 {
+    margin-buttom: 2 rem;
+}
+h1, h2 {
+    text-transform: uppercase;
 }
 /* Navbar */
 #navbar {
