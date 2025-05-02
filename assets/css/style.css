@@ -86,6 +86,7 @@ h1, h2, h3, h5 {
 .sharp-corners * {
     border-radius:0;
 }
+/* Footer */
 #social-networks {
     text-align: center;
     padding: 20px 0;
@@ -96,6 +97,6 @@ h1, h2, h3, h5 {
 
 #social-networks i {
     font-size: 160%;
-    padding: 10%;
+    padding: 5%;
     color: #3a3a3a;
 }
