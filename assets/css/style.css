@@ -33,7 +33,7 @@ body {
 
 }
 
-.col-4,.col-6, .col-12{
+.col-4,.col-6, .col-3,.col-9, .col-12{
 border:2px solid white;
 background-color:lightgray
 }

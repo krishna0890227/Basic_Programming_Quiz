@@ -11,7 +11,7 @@
 <body class="d-flex flex-column min-vh-100">
     <nav class="navbar navbar-expand-lg" data-bs-theme="dark">
         <div class="container">
-          <a class="navbar-brand" href="#">Quiz Test</a>
+          <a class="navbar-brand" href="index.html">logo</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -36,33 +36,60 @@
     <!--Header with hero images-->
     <header class="container">
         <div class="row">
-            <div class="col-12 col-xl-6">Python Programming </div>
-            <div class="col-12 col-xl-6">Python Animation</div>
+            <div class="col-12">
+            <h3>Python is a versatile and beginner-friendly language that
+                 can be used for data science, web development, automation, and more.</h3>
+            </div>    
+            </div>
         </div>
 
     </header>
 <!-- main element to hold all key sections of the home page. It is not part of grid structure -->
-    <main>
-    <div class="container">
-        <h1>Python Quiz</h1>
-        <div class="quiz-info">
-            <span id="question-count">Question 1 of 20</span>
-            <span id="score">Score: 0</span>
-        </div>
-        <div id="quiz-container">
-            <div id="question"></div>
-            <div id="options" class="options"></div>
-            <button id="next-btn" class="next-btn">Next Question</button>
-        </div>
-        <div id="results" class="results hidden">
+    <main class="container">
+    <section class="container">
+    <div class="row">
+        <div class="col-3">
+            <h3>Useful Python Exercise links: </h3>
+            <a href="https://www.geeksforgeeks.org/python-exercises-practice-questions-and-solutions/"> Greek for Greeks
+
+            </a>
+         </div>
+        
+        <div class="col-8">
+            <h1 class="justify-content-center">Python Quiz</h1>
+            
+            <div class="quiz-info">
+                <span id="question-count">Question 1 of 20</span>
+                <span id="score">Score: 0</span>
+            </div>
+            <div id="quiz-container">
+                <div id="question"></div>
+                <div id="options" class="options"></div>
+                <button id="next-btn" class="next-btn btn btn-outline-success btn-lg">Next Question</button>
+            </div>
+             </div>
+         </div>
+    </div>
+    </section>
+<section class="container justify-content-center">
+    <div class="row">
+        <div class="col-6">
+        <div id="results" class="results hidden justify-content-center">
             <h2>Quiz Completed!</h2>
             <p>Your final score is <span id="final-score">0</span> out of 20</p>
             <p>Correct answers: <span id="correct-answers">0</span></p>
             <p>Wrong answers: <span id="wrong-answers">0</span></p>
-            <button id="retry-btn" class="retry-btn">Retry Quiz</button>
-            <a href="index.html" class="home-btn">Back to Home</a>
+            <button id="retry-btn" class="retry-btn btn btn-outline-secondary btn-lg">Retry Quiz</button>
+            <a href="index.html" class="home-btn btn btn-outline-secondary btn-lg">Back to Home</a>
         </div>
+        
     </div>
+    <div class="col-6">
+            <h3>Python Applications</h3>
+            <img src="assets/images/python_hero.JPG" height="360" width="100%" alt="study-python">
+         </div>
+    </div>
+</section>
 </main>
 <!-- Footer / Contact section-->
  <!-- mt-auto added to push to the bottom of the page -->
