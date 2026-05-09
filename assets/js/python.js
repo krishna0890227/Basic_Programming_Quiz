@@ -161,3 +161,102 @@ questions = [
         correctAnswer: 0
     }
 ];
+
+
+// Let's start to make connection between python questions and answers: 
+
+document.addEventListener("DOMContentLoaded", function () {
+    
+    const questionCount = document.getElementById("question-count"); 
+    let countQuestion = Number(questionCount.innerHTML);
+    const NextBtn = document.getElementById("next-btn");
+    let correctCount = 0;
+    let wrongCount = 0;
+    
+ 
+    NextBtn.addEventListener("click", function () {
+        countQuestion = countQuestion +  1;
+        if(countQuestion<=20) {
+        questionCount.innerHTML = countQuestion;
+         let questionChange = document.getElementById("display-question");
+          questionChange.innerHTML = questions[countQuestion].question;
+
+          let optionChange1 = document.getElementById("option1");
+          let optionChange2 = document.getElementById("option2");
+          let optionChange3 = document.getElementById("option3");
+          let optionChange4 = document.getElementById("option4");
+
+          console.log(countQuestion);
+
+          optionChange1.innerHTML = questions[countQuestion].options[0];
+          optionChange2.innerHTML = questions[countQuestion].options[1];
+          optionChange3.innerHTML = questions[countQuestion].options[2];
+          optionChange4.innerHTML = questions[countQuestion].options[3];
+
+          // Let's check correct answers. 
+
+          optionChange1.addEventListener("click", () => checkAnswer(0));
+          optionChange2.addEventListener("click", () => checkAnswer(1));
+          optionChange3.addEventListener("click", () => checkAnswer(2));
+          optionChange4.addEventListener("click", () => checkAnswer(3));
+
+    function checkAnswer(selectedIndex){
+    if(questions[countQuestion].correctAnswer == selectedIndex) {
+        correctCount++;
+    } else {
+        wrongCount++;
+    }
+
+}
+
+        //   optionChange1.addEventListener("click", function(){
+        //     if (questions.correctAnswer == 0) {
+        //         correctAnswer++;
+        //     } else {
+        //         wrongAnswer++;
+        //     }()
+        //   })
+        //   optionChange2.addEventListener("click", function(){
+        //     if (questions.correctAnswer == 1) {
+        //         correctAnswer++;
+        //     } else {
+        //         wrongAnswer++;
+        //     }
+        //   })
+        //   optionChange3.addEventListener("click", function(){
+        //     if (questions.correctAnswer == 2) {
+        //         correctAnswer++;
+        //     } else {
+        //         wrongAnswer++;
+        //     }
+        //   })
+        //   optionChange4.addEventListener("click", function(){
+        //     if (questions.correctAnswer == 3) {
+        //         correctAnswer++;
+        //     } else {
+        //         wrongAnswer++;
+        //     }
+        //   })
+          
+          console.log(correctCount);
+          console.log(wrongCount);
+
+        } else {
+            alert("You completed your task.");
+            countQuestion =1;
+            questionCount.innerHTML = countQuestion; 
+        }
+     
+    });
+
+    // let's change the question according to the
+    let finalScore = document.getElementById("final-score");
+    let correctAnswers = document.getElementById("correct-answers");
+    let wrongAnswers = document.getElementById("wrong-answers");
+
+    finalScore.innerHTML = correctCount;
+    correctAnswers.innerHTML = correctCount;
+    wrongAnswers.innerHTML = wrongCount;
+    console.log(correctCount);
+})
+

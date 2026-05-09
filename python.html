@@ -59,12 +59,17 @@
             <h1 class="justify-content-center">Quiz Questions:</h1>
             
             <div class="quiz-info">
-                <span id="question-count">Question 1 of 20</span>
-                <span id="score">Score: 0</span>
+               <h3> Question : <span id="question-count">1</span> of 20 </h3>
             </div>
             <div id="quiz-container">
-                <div id="question"></div>
-                <div id="options" class="options"></div>
+                 <h3 id="display-question"> "What is the output of 'print(3 * '7')' in Python?"</h3>
+                <div class="col-12">
+                <button id="option1" class="col-8  justify-content-center"> <span>option 1 </span></button>
+               <button id="option2" class="col-8 justify-content-center"> <span>option 2</span></button>
+               <button id= "option3" class="col-8 justify-content-center"><span>option 3</span></button>
+               <button id="option4" class="col-8 justify-content-center"><span> option 4</span></button>
+                </div>
+              
                 <button id="next-btn" class="next-btn btn btn-outline-success btn-lg">Next Question</button>
             </div>
              </div>
@@ -117,31 +122,40 @@
 <!-- Footer / Contact section-->
  <!-- mt-auto added to push to the bottom of the page -->
  <footer class="mt-auto">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-12">
-                <h3>Please Share Your Experience:</h3>
-                <form class="was-validated">
-                    <div class="mb-3 position-relative">
-                      <label for="validationTooltip01" class="form-label">Full Name: </label>
-                      <input type="text" class="form-control" id="validationTooltip01" value="Mark" required>
-                    </div>
-                    <div class="mb-3">
-                      <label for="exampleFormControlInput1" class="form-label">Email Address:</label>
-                      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" required>
-                    </div>
-                    <div class="mb-3">
-                      <label for="validationTextarea" class="form-label">Textarea</label>
-                      <textarea class="form-control" id="validationTextarea" placeholder="Required example textarea" required></textarea>
-                    </div>
-                    <div class="mb-3">
-                      <button class="btn btn-primary" type="submit" disabled>Send</button>
-                    </div>
-                  </form>
-            </div>
-        </div>
-    </div>
-  </footer>  
+  <div class="container">
+      <div class="row justify-content-center">
+          <div id="social-network" class="col-12">
+            <h3>About Us</h3>
+            <h6>ABC Company Limited</h6>
+            <h6>SandyFord, Dublin 12, Ireland</h6>
+            <h6>Contact us on abc@company.ie or </h6>
+            <h6>Call us directly +353-061-458932</h6>
+              <ul id="social-networks">
+                <li>
+                    <a href="https://www.facebook.com/" target="_blank" rel="noopener"
+                        aria-label="Visit our Facebook page (opens in a new tab)">
+                        <i class="fa-brands fa-facebook"></i></a>
+                </li>
+                <li>
+                    <a href="https://www.twitter.com/" target="_blank" rel="noopener"
+                        aria-label="Visit our Twitter page (opens in a new tab)">
+                        <i class="fa-brands fa-twitter-square"></i></a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/" target="_blank" rel="noopener"
+                        aria-label="Visit our YouTube page (opens in a new tab)">
+                        <i class="fa-brands fa-youtube-square"></i></a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/" target="_blank" rel="noopener"
+                        aria-label="Visit our Instagram page (opens in a new tab)">
+                        <i class="fa-brands fa-instagram"></i></a>
+                </li>
+            </ul>
+          </div>
+      </div>
+  </div>
+</footer> 
 <!--Faviocon item links-->
 <script src="https://kit.fontawesome.com/3b20d96fa9.js" crossorigin="anonymous"></script>
     <script src="assets/js/script.js"></script>
