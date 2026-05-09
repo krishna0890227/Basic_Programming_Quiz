@@ -172,10 +172,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const NextBtn = document.getElementById("next-btn");
     let correctCount = 0;
     let wrongCount = 0;
-    
+    let answered = false;
  
     NextBtn.addEventListener("click", function () {
         countQuestion = countQuestion +  1;
+        answered = false;
         if(countQuestion<=20) {
         questionCount.innerHTML = countQuestion;
          let questionChange = document.getElementById("display-question");
@@ -186,7 +187,7 @@ document.addEventListener("DOMContentLoaded", function () {
           let optionChange3 = document.getElementById("option3");
           let optionChange4 = document.getElementById("option4");
 
-          console.log(countQuestion);
+        //   console.log(countQuestion);
 
           optionChange1.innerHTML = questions[countQuestion].options[0];
           optionChange2.innerHTML = questions[countQuestion].options[1];
@@ -201,54 +202,35 @@ document.addEventListener("DOMContentLoaded", function () {
           optionChange4.addEventListener("click", () => checkAnswer(3));
 
     function checkAnswer(selectedIndex){
+        if (answered) return; 
+         answered = true;
     if(questions[countQuestion].correctAnswer == selectedIndex) {
         correctCount++;
+        // alert("right clicked");
     } else {
         wrongCount++;
+        // alert("wrong clicked");
     }
 
-}
-
-        //   optionChange1.addEventListener("click", function(){
-        //     if (questions.correctAnswer == 0) {
-        //         correctAnswer++;
-        //     } else {
-        //         wrongAnswer++;
-        //     }()
-        //   })
-        //   optionChange2.addEventListener("click", function(){
-        //     if (questions.correctAnswer == 1) {
-        //         correctAnswer++;
-        //     } else {
-        //         wrongAnswer++;
-        //     }
-        //   })
-        //   optionChange3.addEventListener("click", function(){
-        //     if (questions.correctAnswer == 2) {
-        //         correctAnswer++;
-        //     } else {
-        //         wrongAnswer++;
-        //     }
-        //   })
-        //   optionChange4.addEventListener("click", function(){
-        //     if (questions.correctAnswer == 3) {
-        //         correctAnswer++;
-        //     } else {
-        //         wrongAnswer++;
-        //     }
-        //   })
-          
-          console.log(correctCount);
-          console.log(wrongCount);
+    }          
+    console.log(correctCount);
+    console.log(wrongCount);
 
         } else {
             alert("You completed your task.");
             countQuestion =1;
             questionCount.innerHTML = countQuestion; 
+
+            showResult(correctCount, wrongCount);
+
+
+
+            
         }
      
     });
 
+    function showResult( correctCount, wrongCount) {
     // let's change the question according to the
     let finalScore = document.getElementById("final-score");
     let correctAnswers = document.getElementById("correct-answers");
@@ -258,5 +240,6 @@ document.addEventListener("DOMContentLoaded", function () {
     correctAnswers.innerHTML = correctCount;
     wrongAnswers.innerHTML = wrongCount;
     console.log(correctCount);
+    }
 })
 
