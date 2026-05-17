@@ -111,3 +111,13 @@ p {
     padding: 5%;
     color: #3a3a3a;
 }
+
+.button-wrapper {
+    display: flex;
+    justify-content: space-between; /* equal spacing */
+    gap: 10px; /* optional spacing */
+}
+
+.button-wrapper button {
+    flex: 1; /* makes all buttons equal width */
+}

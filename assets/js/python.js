@@ -221,11 +221,7 @@ document.addEventListener("DOMContentLoaded", function () {
             countQuestion =1;
             questionCount.innerHTML = countQuestion; 
 
-            showResult(correctCount, wrongCount);
-
-
-
-            
+            showResult(correctCount, wrongCount);  
         }
      
     });
