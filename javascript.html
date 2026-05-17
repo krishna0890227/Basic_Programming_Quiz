@@ -1,130 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScript Quiz</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Quiz</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
 </head>
+
 <body class="d-flex flex-column min-vh-100">
-    <nav class="navbar navbar-expand-lg" data-bs-theme="dark">
-        <div class="container">
-          <a class="navbar-brand" href="index.html">Quiz Test</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item">
-                <a class="nav-link" href="index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="python.html">Python</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="javascript.html">JavaScript</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="css.html">CSS</a>
-              </li>
-            </ul>
+  <nav class="navbar navbar-expand-lg" data-bs-theme="dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Quiz Test</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="python.html">Python</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="javascript.html">JavaScript</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="css.html">CSS</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <header>
+    <div class="container">
+      <p>This is header section </p>
+    </div>
+
+  </header>
+  <main class="container">
+    <section class="container">
+      <div class="row">
+        <div class="col-3">
+          <h3>Useful JavaScript Exercise links: </h3>
+          <a href="https://www.geeksforgeeks.org/javascript/javascript-tutorial/"> Greek for Greeks
+          </a>
+        </div>
+
+        <div class="col-8">
+          <h1 class="justify-content-center">Quiz Questions:</h1>
+
+          <div class="quiz-info">
+            <h3> Question : <span id="question-count">1</span> of 20 </h3>
+          </div>
+          <div id="quiz-container">
+            <h3 id="display-question"> "What is the output of 'typeof null' in JavaScript?",</h3>
+            <div class="col-12 justify-content-center">
+              <div class="row g-2">
+                <div class="col">
+                  <button id="option1" class="btn btn-outline-success btn-sm w-100">option 1</button>
+                </div>
+                <div class="col">
+                  <button id="option2" class="btn btn-outline-success btn-sm w-100">option 2</button>
+                </div>
+                <div class="col">
+                  <button id="option3" class="btn btn-outline-success btn-sm w-100">option 3</button>
+                </div>
+                <div class="col">
+                  <button id="option4" class="btn btn-outline-success btn-sm w-100">option 4</button>
+                </div>
+              </div>
+
+            </div>
+            <button id="next-btn" class="next-btn btn btn-outline-success btn-lg">Next Question</button>
           </div>
         </div>
-      </nav>
-      <header>
-        <div class="container">
-            <p>This is header section </p>
-        </div> 
-        
-        </header>
-        <main>
-    <div class="container">
-        <h1>JavaScript Quiz</h1>
-        <div class="quiz-info">
-            <span id="question-count">Question 1 of 20</span>
-            <span id="score">Score: 0</span>
-        </div>
-        <div id="quiz-container">
-            <div id="question"></div>
-            <div id="options" class="options"></div>
-            <button id="next-btn" class="next-btn">Next Question</button>
-        </div>
-        <div id="results" class="results hidden">
+      </div>
+      </div>
+    </section>
+    <section class="container justify-content-center">
+      <div class="row">
+        <div class="col-6">
+          <div id="results" class="results hidden justify-content-center">
             <h2>Quiz Completed!</h2>
             <p>Your final score is <span id="final-score">0</span> out of 20</p>
             <p>Correct answers: <span id="correct-answers">0</span></p>
             <p>Wrong answers: <span id="wrong-answers">0</span></p>
-            <button id="retry-btn" class="retry-btn">Retry Quiz</button>
-            <a href="index.html" class="home-btn">Back to Home</a>
+            <button id="retry-btn" class="retry-btn btn btn-outline-secondary btn-lg">Retry Quiz</button>
+            <a href="index.html" class="home-btn btn btn-outline-secondary btn-lg">Back to Home</a>
+          </div>
+
         </div>
-    </div>
+        <div class="col-6">
+          <h3>Useful Implementation of Python Programming</h3>
+          <img src="assets/images/python_hero.jpg" height="360" width="100%" alt="study-python">
+        </div>
+      </div>
+    </section>
     <section class="container">
       <div class="col-12 justify-content-center">
         <h3>Please Share Your Experience:</h3>
-          <form class="was-validated">
-            <div class="mb-3 position-relative">
-              <label for="validationTooltip01" class="form-label">Full Name: </label>
-              <input type="text" class="form-control" id="validationTooltip01" value="Mark" required>
-            </div>
-            <div class="mb-3">
-              <label for="exampleFormControlInput1" class="form-label">Email Address:</label>
-              <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" required>
-            </div>
-            <div class="mb-3">
-              <label for="validationTextarea" class="form-label">Textarea</label>
-              <textarea class="form-control" id="validationTextarea" placeholder="Required example textarea" required></textarea>
-            </div>
-            <div class="mb-3">
-              <button class="btn btn-primary" type="submit" disabled>Send</button>
-            </div>
-          </form>
+        <form class="was-validated">
+          <div class="mb-3 position-relative">
+            <label for="validationTooltip01" class="form-label">Full Name: </label>
+            <input type="text" class="form-control" id="validationTooltip01" value="Mark" required>
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Email Address:</label>
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com"
+              required>
+          </div>
+          <div class="mb-3">
+            <label for="validationTextarea" class="form-label">Textarea</label>
+            <textarea class="form-control" id="validationTextarea" placeholder="Required example textarea"
+              required></textarea>
+          </div>
+          <div class="mb-3">
+            <button class="btn btn-primary" type="submit" disabled>Send</button>
+          </div>
+        </form>
       </div>
 
     </section>
-</main> 
- <!-- Footer / Contact section-->
- <!-- mt-auto added to push to the bottom of the page -->
- <footer class="mt-auto">
-  <div class="container">
+  </main>
+  <!-- Footer / Contact section-->
+  <!-- mt-auto added to push to the bottom of the page -->
+  <footer class="mt-auto">
+    <div class="container">
       <div class="row justify-content-center">
-          <div id="social-network" class="col-12">
-            <h3>About Us</h3>
-            <h6>ABC Company Limited</h6>
-            <h6>SandyFord, Dublin 12, Ireland</h6>
-            <h6>Contact us on abc@company.ie or </h6>
-            <h6>Call us directly +353-061-458932</h6>
-              <ul id="social-networks">
-                <li>
-                    <a href="https://www.facebook.com/" target="_blank" rel="noopener"
-                        aria-label="Visit our Facebook page (opens in a new tab)">
-                        <i class="fa-brands fa-facebook"></i></a>
-                </li>
-                <li>
-                    <a href="https://www.twitter.com/" target="_blank" rel="noopener"
-                        aria-label="Visit our Twitter page (opens in a new tab)">
-                        <i class="fa-brands fa-twitter-square"></i></a>
-                </li>
-                <li>
-                    <a href="https://www.youtube.com/" target="_blank" rel="noopener"
-                        aria-label="Visit our YouTube page (opens in a new tab)">
-                        <i class="fa-brands fa-youtube-square"></i></a>
-                </li>
-                <li>
-                    <a href="https://www.instagram.com/" target="_blank" rel="noopener"
-                        aria-label="Visit our Instagram page (opens in a new tab)">
-                        <i class="fa-brands fa-instagram"></i></a>
-                </li>
-            </ul>
-          </div>
+        <div id="social-network" class="col-12">
+          <h3>About Us</h3>
+          <h6>ABC Company Limited</h6>
+          <h6>SandyFord, Dublin 12, Ireland</h6>
+          <h6>Contact us on abc@company.ie or </h6>
+          <h6>Call us directly +353-061-458932</h6>
+          <ul id="social-networks">
+            <li>
+              <a href="https://www.facebook.com/" target="_blank" rel="noopener"
+                aria-label="Visit our Facebook page (opens in a new tab)">
+                <i class="fa-brands fa-facebook"></i></a>
+            </li>
+            <li>
+              <a href="https://www.twitter.com/" target="_blank" rel="noopener"
+                aria-label="Visit our Twitter page (opens in a new tab)">
+                <i class="fa-brands fa-twitter-square"></i></a>
+            </li>
+            <li>
+              <a href="https://www.youtube.com/" target="_blank" rel="noopener"
+                aria-label="Visit our YouTube page (opens in a new tab)">
+                <i class="fa-brands fa-youtube-square"></i></a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/" target="_blank" rel="noopener"
+                aria-label="Visit our Instagram page (opens in a new tab)">
+                <i class="fa-brands fa-instagram"></i></a>
+            </li>
+          </ul>
+        </div>
       </div>
-  </div>
-</footer> 
-<!--Faviocon item links-->
-<script src="https://kit.fontawesome.com/3b20d96fa9.js" crossorigin="anonymous"></script>
-    <script src="assets/js/script.js"></script>
-    <script src="assets/js/javascript.js"></script>
-    <!--Bootstrap JS-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    </div>
+  </footer>
+  <!--Faviocon item links-->
+  <script src="https://kit.fontawesome.com/3b20d96fa9.js" crossorigin="anonymous"></script>
+  <!-- <script src="assets/js/script.js"></script> -->
+  <script src="assets/js/javascript1.js"></script>
+  <!--Bootstrap JS-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+    crossorigin="anonymous"></script>
 </body>
+
 </html>

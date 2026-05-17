@@ -167,81 +167,72 @@ questions = [
     }
 ];
 
-
-// Let's start to make connection between python questions and answers: 
-
 document.addEventListener("DOMContentLoaded", function () {
-    
-    const questionCount = document.getElementById("question-count"); 
-    let countQuestion = Number(questionCount.innerHTML);
-    const NextBtn = document.getElementById("next-btn");
+
+    let currentIndex = 0;
     let correctCount = 0;
     let wrongCount = 0;
     let answered = false;
- 
-    NextBtn.addEventListener("click", function () {
-        alert("Next button clicked")
-        countQuestion = countQuestion +  1;
+
+    const questionCount = document.getElementById("question-count");
+    const questionEl = document.getElementById("display-question");
+
+    const optionButtons = [
+        document.getElementById("option1"),
+        document.getElementById("option2"),
+        document.getElementById("option3"),
+        document.getElementById("option4")
+    ];
+
+    const nextBtn = document.getElementById("next-btn");
+
+    function loadQuestion() {
         answered = false;
-        if(countQuestion<=20) {
-        questionCount.innerHTML = countQuestion;
-         let questionChange = document.getElementById("display-question");
-          questionChange.innerHTML = questions[countQuestion].question;
 
-          let optionChange1 = document.getElementById("option1");
-          let optionChange2 = document.getElementById("option2");
-          let optionChange3 = document.getElementById("option3");
-          let optionChange4 = document.getElementById("option4");
+        const q = questions[currentIndex];
 
-        //   console.log(countQuestion);
+        questionCount.innerHTML = currentIndex + 1;
+        questionEl.innerHTML = q.question;
 
-          optionChange1.innerHTML = questions[countQuestion].options[0];
-          optionChange2.innerHTML = questions[countQuestion].options[1];
-          optionChange3.innerHTML = questions[countQuestion].options[2];
-          optionChange4.innerHTML = questions[countQuestion].options[3];
+        optionButtons.forEach((btn, index) => {
+            btn.innerHTML = q.options[index];
 
-          // Let's check correct answers. 
-
-          optionChange1.addEventListener("click", () => checkAnswer(0));
-          optionChange2.addEventListener("click", () => checkAnswer(1));
-          optionChange3.addEventListener("click", () => checkAnswer(2));
-          optionChange4.addEventListener("click", () => checkAnswer(3));
-
-    function checkAnswer(selectedIndex){
-        if (answered) return; 
-         answered = true;
-    if(questions[countQuestion].correctAnswer == selectedIndex) {
-        correctCount++;
-        // alert("right clicked");
-    } else {
-        wrongCount++;
-        // alert("wrong clicked");
+            btn.onclick = function () {
+                checkAnswer(index);
+            };
+        });
     }
 
-    }          
-    console.log(correctCount);
-    console.log(wrongCount);
+    function checkAnswer(selectedIndex) {
+        if (answered) return;
+        answered = true;
 
+        if (questions[currentIndex].correctAnswer === selectedIndex) {
+            correctCount++;
         } else {
-            alert("You completed your task.");
-            countQuestion =1;
-            questionCount.innerHTML = countQuestion; 
-
-            showResult(correctCount, wrongCount);  
+            wrongCount++;
         }
-     
+    }
+
+    nextBtn.addEventListener("click", function () {
+
+        currentIndex++;
+
+        if (currentIndex < questions.length) {
+            loadQuestion();
+        } else {
+            showResult();
+        }
     });
 
-    function showResult( correctCount, wrongCount) {
-    // let's change the question according to the
-    let finalScore = document.getElementById("final-score");
-    let correctAnswers = document.getElementById("correct-answers");
-    let wrongAnswers = document.getElementById("wrong-answers");
+    function showResult() {
+        document.getElementById("quiz-container").style.display = "none";
+        document.getElementById("results").classList.remove("hidden");
 
-    finalScore.innerHTML = correctCount;
-    correctAnswers.innerHTML = correctCount;
-    wrongAnswers.innerHTML = wrongCount;
-    console.log(correctCount);
+        document.getElementById("final-score").innerText = correctCount;
+        document.getElementById("correct-answers").innerText = correctCount;
+        document.getElementById("wrong-answers").innerText = wrongCount;
     }
-})
 
+    loadQuestion();
+});

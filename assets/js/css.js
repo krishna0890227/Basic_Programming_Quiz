@@ -1,5 +1,5 @@
 // CSS Quiz Questions
-questions = [
+const questions = [
     {
         question: "What does CSS stand for?",
         options: [
@@ -161,3 +161,85 @@ questions = [
         correctAnswer: 2
     }
 ];
+
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    let currentIndex = 0;
+    let correctCount = 0;
+    let wrongCount = 0;
+    let answered = false;
+
+    const questionCount = document.getElementById("question-count");
+    const questionEl = document.getElementById("display-question");
+
+    const optionButtons = [
+        document.getElementById("option1"),
+        document.getElementById("option2"),
+        document.getElementById("option3"),
+        document.getElementById("option4")
+    ];
+
+    const nextBtn = document.getElementById("next-btn");
+
+    // Safety check (important)
+    if (!questionEl || !nextBtn) {
+        console.error("Quiz elements not found in HTML");
+        return;
+    }
+
+    function loadQuestion() {
+        answered = false;
+
+        const q = questions[currentIndex];
+
+        questionCount.innerText = currentIndex + 1;
+        questionEl.innerText = q.question;
+
+        optionButtons.forEach((btn, index) => {
+            btn.innerText = q.options[index];
+
+            btn.onclick = function () {
+                checkAnswer(index);
+            };
+        });
+    }
+
+    function checkAnswer(selectedIndex) {
+        if (answered) return;
+        answered = true;
+
+        if (questions[currentIndex].correctAnswer === selectedIndex) {
+            correctCount++;
+        } else {
+            wrongCount++;
+        }
+    }
+
+    nextBtn.addEventListener("click", function () {
+
+        if (!answered) {
+            alert("Please select an answer first!");
+            return;
+        }
+
+        currentIndex++;
+
+        if (currentIndex < questions.length) {
+            loadQuestion();
+        } else {
+            showResult();
+        }
+    });
+
+    function showResult() {
+        document.getElementById("quiz-container").style.display = "none";
+        document.getElementById("results").classList.remove("hidden");
+
+        document.getElementById("final-score").innerText = correctCount;
+        document.getElementById("correct-answers").innerText = correctCount;
+        document.getElementById("wrong-answers").innerText = wrongCount;
+    }
+
+    loadQuestion();
+});
