@@ -6,7 +6,7 @@
     --primary-font: "Inter", sans-serif;
     --secondary-font: "Macondo", cursive;
     --primary-color: #6A4B38; /*lightgray */ 
-    --secondary-color:  blue; #FBF6E8
+    --secondary-color: #FBF6E8;
 
 }
 /* Global Styles */
@@ -14,7 +14,7 @@
 /* Start body section */
 body {
     font-family: var(--primary-font);
-    background-color: whitesmoke;
+    background-color: skyblue;
     padding: 0;
     margin: 0;
     font-family:"Courier Prime", monospace;
@@ -30,10 +30,10 @@ body {
     left: 10px;
 }
 
-.col-4,.col-6, .col-3,.col-9, .col-12{
-border:5px solid white;
+/* .col-4,.col-6, .col-3,.col-9, .col-12{
+border:2px solid white;
 background-color:lightgray
-}
+} */
 
 /* Start Navigation Section */
 nav {
