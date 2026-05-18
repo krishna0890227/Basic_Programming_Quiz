@@ -32,7 +32,7 @@ body {
 
 .col-4,.col-6, .col-3,.col-9, .col-12{
 border:5px solid white;
-background-color:lightgray
+background-color:lightgray;
 }
 
 /* Start Navigation Section */

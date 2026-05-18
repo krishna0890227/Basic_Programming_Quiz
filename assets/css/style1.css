@@ -3,10 +3,10 @@
 
 /* root section of css*/
 :root {
-    --primary-font: "Inter", sans-serif;
+    --primary-font: sans-serif,"Inter";
     --secondary-font: "Macondo", cursive;
     --primary-color: #6A4B38; /*lightgray */ 
-    --secondary-color: #FBF6E8;
+    --secondary-color: blue; /* #FBF6E8 */
 
 }
 /* Global Styles */
@@ -14,7 +14,7 @@
 /* Start body section */
 body {
     font-family: var(--primary-font);
-    background-color: skyblue;
+    background-color: rgb(198, 230, 242);
     padding: 0;
     margin: 0;
     font-family:"Courier Prime", monospace;
@@ -30,10 +30,10 @@ body {
     left: 10px;
 }
 
-/* .col-4,.col-6, .col-3,.col-9, .col-12{
-border:2px solid white;
+.col-4,.col-6, .col-3,.col-9, .col-12{
+border:5px solid white;
 background-color:lightgray
-} */
+}
 
 /* Start Navigation Section */
 nav {
@@ -44,15 +44,16 @@ nav {
 
 h1, h2, h3, h5 { 
     color:darkgreen;
-    font-family: var(--secondary-font);
+    font-family: var(--primary-font);
     color: var(--primary-color);
 
 }
 
 h1, h2, h3 {
-    margin-buttom: 2 rem;
+    margin-buttom: 3 rem;
 }
 p {
+    font-family: var(--secondary-font);
     color: var(--secondary-color);
 }
 
