@@ -83,6 +83,19 @@ overflow: hidden;
   }
 }
 
+.box-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px; 
+}
+
+.box {
+  width: 50%;
+  padding: 5px;
+  margin-bottom: 10px;
+  background: lightgray;
+  border-radius: 10px;
+}
 /* Different IDs */
 #aboutus {
     color: yellogreen;
