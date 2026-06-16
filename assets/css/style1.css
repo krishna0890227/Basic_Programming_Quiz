@@ -62,8 +62,25 @@ p {
     background-color: var(--primary-color);
 }
 
-#hero-msg{
-    font-size: 3rem;
+.hero-msg{
+overflow: hidden;
+  white-space: nowrap;
+  color: white;
+  padding: 3px;
+}
+
+.hero-msg p {
+  display: inline-block;
+  animation: scroll-left 10s linear infinite;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
 }
 
 /* Different IDs */
