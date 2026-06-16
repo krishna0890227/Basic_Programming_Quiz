@@ -62,6 +62,9 @@ p {
     background-color: var(--primary-color);
 }
 
+#hero-msg{
+    font-size: 3rem;
+}
 
 /* Different IDs */
 #aboutus {
@@ -107,6 +110,9 @@ p {
     color: #3a3a3a;
 }
 
+#footer-info{
+    font-size: 5rem;
+}
 .button-wrapper {
     display: flex;
     justify-content: space-between; /* equal spacing */
