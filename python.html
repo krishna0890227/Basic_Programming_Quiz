@@ -112,23 +112,23 @@
     <section class="container">
       <div class="col-12 justify-content-center">
         <h3>Please Share Your Experience:</h3>
-        <form class="was-validated">
+        <form action="https://formdump.codeinstitute.net" method="POST">
           <div class="mb-3 position-relative">
-            <label for="validationTooltip01" class="form-label">Full Name: </label>
-            <input type="text" class="form-control" id="validationTooltip01" value="Mark" required>
+            <label for="first-name" class="form-label">Full Name: </label>
+            <input type="text" class="form-control" name="first_name" id="first-name" value="Mark" required>
           </div>
           <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Email Address:</label>
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com"
+            <label for="email" class="form-label">Email Address:</label>
+            <input type="email" class="form-control"  name="email_address" id="email" placeholder="name@example.com"
               required>
           </div>
           <div class="mb-3">
-            <label for="validationTextarea" class="form-label">Textarea</label>
-            <textarea class="form-control" id="validationTextarea" placeholder="Required example textarea"
+            <label for="textarea" class="form-label">Textarea</label>
+            <textarea class="form-control" name="text_area" id="textarea" placeholder="Share your experience here..."
               required></textarea>
-          </div>
+          </div> 
           <div class="mb-3">
-            <button class="btn btn-primary" type="submit" disabled>Send</button>
+            <button class="btn btn-primary" type="submit">Send</button>
           </div>
         </form>
       </div>
